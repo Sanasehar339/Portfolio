@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  ::selection {
+    @apply bg-gray-500;
+  }
+  body,
+  .scroll {
+    overflow-y: scroll;
+  }
+  body::-webkit-scrollbar,
+  .scroll::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  body::-webkit-scrollbar,
+  .scroll::-webkit-scrollbar {
+    width: 5px;
+    background: #000;
+  }
+
+  body::-webkit-scrollbar-thumb,
+  .scroll::-webkit-scrollbar-thumb {
+    width: 5px;
+    border-radius: 5px;
+    background: #aaa;
+  }
+  h1 {
+    @apply font-bold text-2xl font-[Montserrat];
+  }
+  h2 {
+    @apply text-5xl font-semibold mt-5 text-center;
+  }
+  li {
+    @apply sm:px-3 sm:m-0 sm:text-lg  font-medium transition-colors  hover:font-semibold hover:underline cursor-pointer sm:border-0 border-b-[1px] border-slate-500 m-5 text-xl text-center;
+  }
+  .shadows {
+    box-shadow: 4px 4px 6px #363636, inset 2px 2px 4px rgba(1, 1, 1, 0.3);
+  }
+  .shadows:hover {
+    box-shadow: 4px 4px 6px #fff, inset 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  input {
+    @apply w-full m-2 text-lg text-zinc-500 px-4 outline-none py-2 bg-transparent border-b-2 border-zinc-500;
+  }
+}
